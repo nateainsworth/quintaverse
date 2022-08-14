@@ -5,10 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "SET NODE_ENV=dev && npm run build && npm run devmon",
+    "start": "node server/server.js",
+    "devmon": "nodemon server/server.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
     "core-js": "^3.8.3",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3"
